@@ -1,0 +1,27 @@
+# Editor files
+/.idea
+/.vs
+/.vscode
+/.zed
+
+# Nix output files
+/result
+/result-*
+
+# Build output files
+/.astro
+/dist
+
+# Dependencies
+/node_modules
+
+# Environment files
+/.direnv
+/*.env
+
+# Temporary files
+/temp
+/tmp
+
+# System files
+.DS_Store
