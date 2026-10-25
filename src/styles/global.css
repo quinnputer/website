@@ -1,1 +1,55 @@
+@import "@fontsource/new-rocker";
+@import "@fontsource/spectral";
+@import "@fontsource/spectral/700.css";
 @import "tailwindcss";
+
+@theme {
+  --font-title: "New Rocker";
+  --font-serif: "Spectral";
+
+  --color-background: #080808;
+  --color-background-lighter: #111111;
+  --color-foreground: #f4f4f4;
+  --color-highlight: #25a883;
+  --color-underline: #a6a6a6;
+}
+
+@layer base {
+  p {
+    @apply text-xl/relaxed;
+  }
+
+  main h1 {
+    @apply mb-2 font-bold text-3xl;
+  }
+
+  main a {
+    @apply underline decoration-dashed decoration-underline;
+    @apply hover:decoration-highlight hover:text-highlight;
+    @apply transition-colors ease-in-out duration-100;
+  }
+}
+
+@layer components {
+  .logo {
+    --shadow-color: var(--color-highlight);
+    --shadow-offset: 0.15rem;
+
+    --stroke-color: #438691;
+    --stroke-offset: 0.05rem;
+    --stroke-offset-neg: calc(var(--stroke-offset) * -1);
+
+    transition: text-shadow 200ms ease-in-out;
+
+    text-shadow:
+      var(--stroke-offset) var(--stroke-offset) var(--stroke-color),
+      var(--stroke-offset-neg) var(--stroke-offset) var(--stroke-color),
+      var(--stroke-offset-neg) var(--stroke-offset-neg) var(--stroke-color),
+      var(--stroke-offset) var(--stroke-offset-neg) var(--stroke-color),
+      var(--shadow-offset) var(--shadow-offset) var(--shadow-color);
+
+    &:hover {
+      --shadow-offset: 0.2rem;
+    }
+  }
+}

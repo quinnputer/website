@@ -13,6 +13,8 @@
     "format": "prettier . --write"
   },
   "dependencies": {
+    "@fontsource/new-rocker": "^5.3.0",
+    "@fontsource/spectral": "^5.3.0",
     "@tailwindcss/vite": "^4.3.3",
     "astro": "^7.4.2",
     "tailwindcss": "^4.3.3"
