@@ -8,6 +8,7 @@
         pkgs.cocogitto
         pkgs.git
         pkgs.nodejs
+        pkgs.secretspec
       ];
 
       shellHook = ''

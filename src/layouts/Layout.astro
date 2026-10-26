@@ -1,0 +1,28 @@
+---
+import "@/styles/global.css";
+import Header from "@/components/Header.astro";
+
+type Props = {
+  title: string;
+};
+
+const { title } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+
+    <title>Quinn's Website &#x2022; {title}</title>
+  </head>
+
+  <body class="font-serif h-screen text-foreground bg-background md:bg-radial-[at_50%_80%] from-background-lighter to-background">
+    <Header />
+
+    <main class="flex flex-col gap-y-5 md:gap-y-7 lg:gap-y-10 mx-4 md:w-10/12 md:mx-auto lg:w-8/12 xl:w-7/12 2xl:w-6/12 3xl:w-5/12 4xl:w-4/12">
+      <slot />
+    </main>
+  </body>
+</html>

@@ -4,14 +4,23 @@
 @import "tailwindcss";
 
 @theme {
+  --breakpoint-3xl: 120rem;
+  --breakpoint-4xl: 150rem;
+
   --font-title: "New Rocker";
   --font-serif: "Spectral";
 
   --color-background: #080808;
   --color-background-lighter: #111111;
+
   --color-foreground: #f4f4f4;
-  --color-highlight: #25a883;
+  --color-foreground-darker: #dbdbdb;
+
   --color-underline: #a6a6a6;
+  --color-highlight: #25a883;
+
+  --color-section-background: #101010;
+  --color-section-border: #373737;
 }
 
 @layer base {

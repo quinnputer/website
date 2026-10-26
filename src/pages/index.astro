@@ -1,37 +1,8 @@
 ---
-import "@/styles/global.css";
+import Intro from "@/components/Intro.astro";
+import Layout from "@/layouts/Layout.astro";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-
-    <title>Quinn's Website</title>
-  </head>
-
-  <body class="font-serif h-screen text-foreground bg-background md:bg-radial-[at_50%_80%] from-background-lighter to-background">
-    <header class="text-center my-4 mb-8">
-      <h1 class="logo font-title text-5xl">
-        <a href="/">emo.gay</a>
-      </h1>
-    </header>
-
-    <main class="flex flex-col gap-y-10 mx-4 md:w-10/12 md:mx-auto lg:w-8/12 xl:w-6/12">
-      <section>
-        <h1>Helloooo!!! Hiiii!!!!</h1>
-
-        <p>
-          My name is Quinn, and I’m emo and gay. This is my epic and amazing
-          website where I might post stuff occasionally. Have a look around and
-          click some links, or read more about me on my{" "}
-          <a href="/about">awesome about me page</a>! Or, if none of that seems
-          interesting to you, click{" "}
-          <a href="/images/very-cool-cat-picture.jpg">this link</a> for a very
-          cool cat picture.
-        </p>
-      </section>
-    </main>
-  </body>
-</html>
+<Layout title="Home">
+  <Intro />
+</Layout>
