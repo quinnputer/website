@@ -1,10 +1,61 @@
 ---
 import Layout from "@/layouts/Layout.astro";
+
+const DETAILS = [
+  { key: "Name", value: "Quinn Heyman" },
+  { key: "Gender", value: "Non-binary" },
+  { key: "Pronouns", value: "They/them" },
+  { key: "Country", value: "Belgium" },
+  { key: "Birthday", value: "25/01/2001" },
+  { key: "Status", value: "Alive" },
+] as const;
 ---
 
 <Layout title="About">
+  <section class="bg-section-background border border-solid border-section-border p-4">
+    <header class="flex items-center justify-between mb-3">
+      <h1>
+        Quinn{" "}
+        <span class="text-base text-foreground-darkest">aka quinnputer</span>
+      </h1>
+
+      <i class="fa-solid fa-id-card fa-xl text-foreground-darkest" />
+    </header>
+
+    <div class="flex items-start gap-x-4">
+      <img
+        src="/images/me.png"
+        alt="Me holding a fluffy kitty."
+        class="aspect-square object-cover w-5/12 md:w-3/12 border border-solid border-section-border"
+      />
+
+      <dl class="grid grid-cols-2 md:grid-cols-3 md:gap-y-6 justify-between w-full">
+        {DETAILS.map((detail) => (
+          <div>
+            <dt class="font-bold text-lg">{detail.key}</dt>
+            <dd class="mb-4 text-base">{detail.value}</dd>
+          </div>
+        ))}
+      </dl>
+    </div>
+  </section>
+
   <section>
     <h1>About Me</h1>
-    <p>I am bunny :3</p>
+
+    <p>
+      Hi! My name is Quinn, and I'm emo and gay. I'm a non-binary, autistic
+      creature who loves coding, watching movies, reading manga, playing video
+      games and listening to music made by edgy sadboys.
+    </p>
+
+    <p>
+      I'm self-taught in pretty much everything I'm good at because I sucked at
+      school. I started teaching myself coding at twelve years old and heave
+      learned many different programming languages and technologies since. Other
+      things I want to learn are Japanese and guitar, both of which I've been
+      learning on-and-off somewhat inconsistently but I hope to one day get good
+      at at least one of those.
+    </p>
   </section>
 </Layout>
