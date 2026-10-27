@@ -1,0 +1,83 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Badge from "@/components/common/Badge.astro";
+
+const LINES = [
+  `<a href="https://emo.gay">`,
+  `  <img`,
+  `    src="https://emo.gay/images/badge.png"`,
+  `    alt="emo crona (quinn's site)"`,
+  `    width="88"`,
+  `    height="31"`,
+  `  />`,
+  `</a>`,
+];
+---
+
+<Layout title="Friends">
+  <section>
+    <h1>Friends</h1>
+
+    <p>
+      Here you'll find some badges from other people whose websites you should
+      check out! If you want your site added here, feel free to{" "}
+      <a href="/">hit me up</a> via one of the contact links on this site. If
+      you want to add my badge to your site, you can do so using the following
+      HTML:
+    </p>
+
+    <code class="block">{LINES.map((line) => <pre>{line}</pre>)}</code>
+  </section>
+
+  <section>
+    <h1>Badges</h1>
+
+    <div class="flex flex-wrap gap-3">
+      <Badge
+        href="https://koi.rip"
+        src="https://koi.rip/img/badges/mimi-the-car.gif"
+        alt="mimi the cat"
+        title="June (koi.rip)"
+      />
+
+      <Badge
+        href="https://isabelroses.com"
+        src="https://isabelroses.com/badges/me.gif"
+        alt="Nix gf"
+        title="Isabel (isabelroses.com)"
+      />
+
+      <Badge
+        href="https://nunikii.ebil.club"
+        src="https://nunikii.ebil.club/assets/gifs/88x31.gif"
+        alt="Nunikii badge with an animated pixel art of a cherry blossom leaf on the left."
+        title="Nunikii (nunikii.ebil.club)"
+      />
+
+      <Badge
+        href="https://robinwobin.dev"
+        src="https://robinwobin.dev/badges/me.gif"
+        alt="Robin"
+        title="Robin (robinwobin.dev)"
+      />
+
+      <Badge
+        href="https://thegail.site"
+        src="https://thegail.site/images/bunny88x31.webp"
+        alt="The Gail"
+        title="Ashley (thegail.site)"
+      />
+    </div>
+  </section>
+
+  <section>
+    <h1>My Badge</h1>
+
+    <Badge
+      href="https://emo.gay"
+      src="/images/badge.png"
+      alt="emo crona (quinn's site)"
+      title="Quinn (emo.gay)"
+    />
+  </section>
+</Layout>

@@ -34,7 +34,8 @@
     @apply mb-2 font-bold text-3xl;
   }
 
-  main p:not(:last-child) {
+  main p:not(:last-child),
+  main code:not(:last-child) {
     @apply mb-4;
   }
 
@@ -42,6 +43,11 @@
     @apply underline decoration-dashed decoration-underline;
     @apply hover:decoration-highlight hover:text-highlight;
     @apply transition-colors ease-in-out duration-100;
+  }
+
+  code {
+    @apply border border-solid border-section-border;
+    @apply p-2 overflow-x-scroll;
   }
 }
 
@@ -66,5 +72,9 @@
     &:hover {
       --shadow-offset: 0.2rem;
     }
+  }
+
+  .link-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 gap-2;
   }
 }

@@ -1,0 +1,14 @@
+---
+type Props = {
+  alt: string;
+  src: string;
+  title: string;
+  href: string;
+};
+
+const props = Astro.props;
+---
+
+<a target="_blank" class="inline-block" title={props.title} href={props.href}>
+  <img width="88" height="31" src={props.src} alt={props.alt} />
+</a>

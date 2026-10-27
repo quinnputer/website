@@ -1,52 +1,83 @@
 ---
-const LINKS = [
-  {
-    title: "Bluesky",
-    description: "I post stuff here.",
-    url: "https://bsky.app/profile/emo.gay",
-    icon: "fa-brands fa-bluesky",
-  },
-  {
-    title: "Letterboxd",
-    description: "I write movie reviews here.",
-    url: "https://letterboxd.com/quinnputer",
-    icon: "fa-brands fa-letterboxd",
-  },
-  {
-    title: "GitHub",
-    description: "I write code here.",
-    url: "https://github.com/quinnputer",
-    icon: "fa-brands fa-github",
-  },
-  {
-    title: "Last.FM",
-    description: "I track my music here.",
-    url: "https://last.fm/user/quinnputer",
-    icon: "fa-brands fa-lastfm",
-  },
-];
+import LinkCard from "@/components/common/LinkCard.astro";
 ---
+
+<section>
+  <h1>Pages</h1>
+
+  <div class="link-grid">
+    <LinkCard
+      title="About Me"
+      description="Read some stuff about me :3"
+      url="/about"
+      icon="fa-solid fa-id-card"
+    />
+
+    <LinkCard
+      title="Friends"
+      description="Other cool people."
+      url="/friends"
+      icon="fa-solid fa-users"
+    />
+  </div>
+</section>
 
 <section>
   <h1>Links</h1>
 
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
-    {LINKS.map((link) => (
-      <a
-        class="flex justify-between items-center no-underline px-2 md:px-4 py-2 md:py-3 hover:text-foreground hover:border-highlight bg-section-background border border-solid border-section-border"
-        target="_blank"
-        href={link.url}
-      >
-        <div class="grow">
-          <h1 class="text-lg lg:text-xl mb-1">{link.title}</h1>
+  <div class="link-grid">
+    <LinkCard
+      blank
+      title="Bluesky"
+      description="I post stuff here."
+      url="https://bsky.app/profile/emo.gay"
+      icon="fa-brands fa-bluesky"
+    />
 
-          <p class="text-foreground-darker w-11/12 text-base lg:text-lg">
-            {link.description}
-          </p>
-        </div>
+    <LinkCard
+      blank
+      title="Letterboxd"
+      description="I write movie reviews here."
+      url="https://letterboxd.com/quinnputer"
+      icon="fa-brands fa-letterboxd"
+    />
 
-        <i class={`${link.icon} fa-2x text-foreground-darkest`} />
-      </a>
-    ))}
+    <LinkCard
+      blank
+      title="GitHub"
+      description="I write code here."
+      url="https://github.com/quinnputer"
+      icon="fa-brands fa-github"
+    />
+
+    <LinkCard
+      blank
+      title="Last.FM"
+      description="I track my music here."
+      url="https://last.fm/user/quinnputer"
+      icon="fa-brands fa-lastfm"
+    />
+  </div>
+</section>
+
+<section>
+  <h1>Contact</h1>
+
+  <div class="link-grid">
+    <LinkCard
+      blank
+      title="Mail"
+      description="Send me an electronic mail!"
+      url="mailto:quinn@emo.gay"
+      icon="fa-solid fa-envelope"
+    />
+
+    <LinkCard
+      blank
+      title="Discord"
+      description="Slip into my DMs."
+      url="https://discord.com/users/265449318780108800"
+      icon="fa-brands fa-discord"
+    />
   </div>
 </section>
