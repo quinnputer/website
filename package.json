@@ -16,6 +16,7 @@
     "@astrojs/svelte": "^9.1.1",
     "@fontsource/new-rocker": "^5.3.0",
     "@fontsource/spectral": "^5.3.0",
+    "@fortawesome/fontawesome-free": "^7.3.1",
     "@tailwindcss/vite": "^4.3.3",
     "astro": "^7.4.2",
     "prettier-plugin-svelte": "^4.1.1",

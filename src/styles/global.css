@@ -1,6 +1,7 @@
 @import "@fontsource/new-rocker";
 @import "@fontsource/spectral";
 @import "@fontsource/spectral/700.css";
+@import "@fortawesome/fontawesome-free/css/all.min.css";
 @import "tailwindcss";
 
 @theme {
@@ -15,6 +16,7 @@
 
   --color-foreground: #f4f4f4;
   --color-foreground-darker: #dbdbdb;
+  --color-foreground-darkest: #9f9f9f;
 
   --color-underline: #a6a6a6;
   --color-highlight: #25a883;

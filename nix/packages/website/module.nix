@@ -12,7 +12,7 @@ let
     pname = manifest.name;
     version = manifest.version;
     src = self;
-    npmDepsHash = "sha256-G+yWTYu4ZVHhlNvJJfxyWljaFKiZWsiprREvarWD040=";
+    npmDepsHash = "sha256-xmZWHytlJgW4LDzsUi1Cd5VB2IVecvuFdObesjFWPEg=";
 
     nativeBuildInputs = [
       pkgs.secretspec

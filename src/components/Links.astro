@@ -1,0 +1,52 @@
+---
+const LINKS = [
+  {
+    title: "Bluesky",
+    description: "I post stuff here.",
+    url: "https://bsky.app/profile/emo.gay",
+    icon: "fa-brands fa-bluesky",
+  },
+  {
+    title: "Letterboxd",
+    description: "I write movie reviews here.",
+    url: "https://letterboxd.com/quinnputer",
+    icon: "fa-brands fa-letterboxd",
+  },
+  {
+    title: "GitHub",
+    description: "I write code here.",
+    url: "https://github.com/quinnputer",
+    icon: "fa-brands fa-github",
+  },
+  {
+    title: "Last.FM",
+    description: "I track my music here.",
+    url: "https://last.fm/user/quinnputer",
+    icon: "fa-brands fa-lastfm",
+  },
+];
+---
+
+<section>
+  <h1>Links</h1>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+    {LINKS.map((link) => (
+      <a
+        class="flex justify-between items-center no-underline px-2 md:px-4 py-2 md:py-3 hover:text-foreground hover:border-highlight bg-section-background border border-solid border-section-border"
+        target="_blank"
+        href={link.url}
+      >
+        <div class="grow">
+          <h1 class="text-lg lg:text-xl mb-1">{link.title}</h1>
+
+          <p class="text-foreground-darker w-11/12 text-base lg:text-lg">
+            {link.description}
+          </p>
+        </div>
+
+        <i class={`${link.icon} fa-2x text-foreground-darkest`} />
+      </a>
+    ))}
+  </div>
+</section>
