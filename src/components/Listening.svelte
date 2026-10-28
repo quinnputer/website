@@ -9,7 +9,7 @@
   let track = $state<Awaited<ReturnType<typeof loadLatestTrack>>>();
 
   async function loadLatestTrack() {
-    const url = new URL("http://ws.audioscrobbler.com/2.0");
+    const url = new URL("https://ws.audioscrobbler.com/2.0");
     url.searchParams.set("method", "user.getrecenttracks");
     url.searchParams.set("user", "quinnputer");
     url.searchParams.set("api_key", apiKey);
