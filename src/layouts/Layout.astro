@@ -15,7 +15,17 @@ const { title } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
 
+    <meta name="og:title" content="Quinn's Website" />
+    <meta name="og:type" content="website" />
+    <meta name="og:image" content="https://emo.gay/images/avatar.jpg" />
+    <meta
+      name="og:description"
+      content="Hi! My name is Quinn and I'm emo and gay."
+    />
+
     <title>Quinn's Website &#x2022; {title}</title>
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
   </head>
 
   <body class="font-serif h-screen text-foreground bg-background md:bg-radial-[at_50%_80%] from-background-lighter to-background">
