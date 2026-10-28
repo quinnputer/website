@@ -45,7 +45,7 @@
   this={track ? "a" : "div"}
   href={track?.url}
   target="_blank"
-  class="no-underline hover:text-foreground hover:border-highlight flex items-center justify-between w-full min-w-0 bg-section-background border border-solid border-section-border"
+  class="no-underline hover:text-foreground hover:border-highlight flex items-center justify-between w-full h-20 md:h-30 lg:h-40 min-w-0 bg-section-background border border-solid border-section-border"
 >
   <div class="px-2 md:px-4 lg:px-6 flex-1 min-w-0">
     <h1 class="text-base md:text-lg lg:text-2xl mb-1">
@@ -60,7 +60,7 @@
   </div>
 
   <img
-    class="size-20 md:size-30 lg:size-40 shrink-0 object-cover"
+    class="h-full shrink-0 object-cover"
     src={track?.image ?? "/images/loading.gif"}
     alt={track?.title ?? "Loading"}
   />
