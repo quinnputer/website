@@ -45,22 +45,22 @@
   this={track ? "a" : "div"}
   href={track?.url}
   target="_blank"
-  class="no-underline hover:text-foreground hover:border-highlight flex items-center justify-between w-full bg-section-background border border-solid border-section-border"
+  class="no-underline hover:text-foreground hover:border-highlight flex items-center justify-between w-full min-w-0 bg-section-background border border-solid border-section-border"
 >
-  <div class="w-full px-2 md:px-4 lg:px-6">
+  <div class="px-2 md:px-4 lg:px-6 flex-1 min-w-0">
     <h1 class="text-base md:text-lg lg:text-2xl mb-1">
       {track?.currentlyPlaying ? "Currently listening to" : "Most recent track"}
     </h1>
 
     <p
-      class="text-foreground-darker text-sm truncate w-11/12 md:text-base lg:text-lg"
+      class="text-foreground-darker text-sm max-w-full truncate md:text-base lg:text-lg w-full"
     >
       {track?.title ?? "Loading..."}
     </p>
   </div>
 
   <img
-    class="size-20 md:size-30 lg:size-40"
+    class="size-20 md:size-30 lg:size-40 shrink-0 object-cover"
     src={track?.image ?? "/images/loading.gif"}
     alt={track?.title ?? "Loading"}
   />
