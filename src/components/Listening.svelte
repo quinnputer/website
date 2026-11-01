@@ -61,7 +61,7 @@
 
   <img
     class="h-full shrink-0 object-cover"
-    src={track?.image ?? "/images/loading.gif"}
+    src={track?.image ?? "/images/utils/loading.gif"}
     alt={track?.title ?? "Loading"}
   />
 </svelte:element>
