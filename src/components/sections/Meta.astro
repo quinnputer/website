@@ -5,6 +5,7 @@ type Props = {
 
 const title = "Quinn's Website";
 const description = "Hi! My name is Quinn and I'm emo and gay.";
+const image = "https://emo.gay/images/avatars/sasuke.jpg";
 ---
 
 <meta charset="utf-8" />
@@ -12,9 +13,9 @@ const description = "Hi! My name is Quinn and I'm emo and gay.";
 <meta name="generator" content={Astro.generator} />
 
 <meta name="og:type" content="website" />
-<meta name="og:image" content="https://emo.gay/images/avatar.jpg" />
-<meta name="og:title" content={title} />
 <meta name="og:description" content={description} />
+<meta name="og:image" content={image} />
+<meta name="og:title" content={title} />
 
 <title>{title} &#x2022; {Astro.props.title}</title>
 

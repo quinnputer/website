@@ -1,0 +1,36 @@
+---
+type Props = {
+  text: string;
+  href?: string;
+};
+
+const props = Astro.props;
+---
+
+<h1 class="font-title text-5xl">
+  {props.href ? <a href={props.href}>{props.text}</a> : props.text}
+</h1>
+
+<style scoped>
+  h1 {
+    --shadow-color: var(--color-highlight);
+    --shadow-offset: 0.15rem;
+
+    --stroke-color: #438691;
+    --stroke-offset: 0.05rem;
+    --stroke-offset-neg: calc(var(--stroke-offset) * -1);
+
+    transition: text-shadow 200ms ease-in-out;
+
+    text-shadow:
+      var(--stroke-offset) var(--stroke-offset) var(--stroke-color),
+      var(--stroke-offset-neg) var(--stroke-offset) var(--stroke-color),
+      var(--stroke-offset-neg) var(--stroke-offset-neg) var(--stroke-color),
+      var(--stroke-offset) var(--stroke-offset-neg) var(--stroke-color),
+      var(--shadow-offset) var(--shadow-offset) var(--shadow-color);
+  }
+
+  h1:hover {
+    --shadow-offset: 0.2rem;
+  }
+</style>

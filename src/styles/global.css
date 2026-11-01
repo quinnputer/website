@@ -10,7 +10,6 @@
 
   --font-title: "New Rocker";
   --font-serif: "Spectral";
-
   --color-background: #080808;
   --color-background-lighter: #111111;
 
@@ -52,28 +51,6 @@
 }
 
 @layer components {
-  .logo {
-    --shadow-color: var(--color-highlight);
-    --shadow-offset: 0.15rem;
-
-    --stroke-color: #438691;
-    --stroke-offset: 0.05rem;
-    --stroke-offset-neg: calc(var(--stroke-offset) * -1);
-
-    transition: text-shadow 200ms ease-in-out;
-
-    text-shadow:
-      var(--stroke-offset) var(--stroke-offset) var(--stroke-color),
-      var(--stroke-offset-neg) var(--stroke-offset) var(--stroke-color),
-      var(--stroke-offset-neg) var(--stroke-offset-neg) var(--stroke-color),
-      var(--stroke-offset) var(--stroke-offset-neg) var(--stroke-color),
-      var(--shadow-offset) var(--shadow-offset) var(--shadow-color);
-
-    &:hover {
-      --shadow-offset: 0.2rem;
-    }
-  }
-
   .link-grid {
     @apply grid grid-cols-1 md:grid-cols-2 gap-2;
   }
