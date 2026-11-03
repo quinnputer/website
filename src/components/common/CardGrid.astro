@@ -1,0 +1,16 @@
+---
+import Card from "@/components/common/Card.astro";
+import { type ComponentProps } from "astro/types";
+
+type Props = {
+  cards: ComponentProps<typeof Card>[];
+};
+
+const props = Astro.props;
+---
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+  {props.cards.map((card) => (
+    <Card {...card} />
+  ))}
+</div>

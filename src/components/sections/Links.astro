@@ -1,83 +1,84 @@
 ---
-import Card from "@/components/common/Card.astro";
+import CardGrid from "@/components/common/CardGrid.astro";
 ---
 
 <section>
   <h1>Pages</h1>
 
-  <div class="link-grid">
-    <Card
-      title="About Me"
-      description="Read some stuff about me :3"
-      url="/about"
-      icon="fa-solid fa-id-card"
-    />
-
-    <Card
-      title="Friends"
-      description="Other cool people."
-      url="/friends"
-      icon="fa-solid fa-users"
-    />
-  </div>
+  <CardGrid
+    cards={[
+      {
+        title: "About Me",
+        description: "Read some stuff about me :3",
+        url: "/about",
+        icon: "fa-solid fa-id-card",
+      },
+      {
+        title: "Friends",
+        description: "Other cool people",
+        url: "/friends",
+        icon: "fa-solid fa-users",
+      },
+    ]}
+  />
 </section>
 
 <section>
   <h1>Links</h1>
 
-  <div class="link-grid">
-    <Card
-      blank
-      title="Bluesky"
-      description="I post stuff here."
-      url="https://bsky.app/profile/emo.gay"
-      icon="fa-brands fa-bluesky"
-    />
-
-    <Card
-      blank
-      title="Letterboxd"
-      description="I write movie reviews here."
-      url="https://letterboxd.com/quinnputer"
-      icon="fa-brands fa-letterboxd"
-    />
-
-    <Card
-      blank
-      title="GitHub"
-      description="I write code here."
-      url="https://github.com/quinnputer"
-      icon="fa-brands fa-github"
-    />
-
-    <Card
-      blank
-      title="Last.FM"
-      description="I track my music here."
-      url="https://last.fm/user/quinnputer"
-      icon="fa-brands fa-lastfm"
-    />
-  </div>
+  <CardGrid
+    cards={[
+      {
+        blank: true,
+        title: "Bluesky",
+        description: "I post stuff here.",
+        url: "https://bsky.app/profile/emo.gay",
+        icon: "fa-brands fa-bluesky",
+      },
+      {
+        blank: true,
+        title: "Letterboxd",
+        description: "I write movie reviews here.",
+        url: "https://letterboxd.com/quinnputer",
+        icon: "fa-brands fa-letterboxd",
+      },
+      {
+        blank: true,
+        title: "GitHub",
+        description: "I write code here.",
+        url: "https://github.com/quinnputer",
+        icon: "fa-brands fa-github",
+      },
+      {
+        blank: true,
+        title: "Last.FM",
+        description: "I track my music here.",
+        url: "https://last.fm/user/quinnputer",
+        icon: "fa-brands fa-lastfm",
+      },
+    ]}
+  />
 </section>
 
 <section>
   <h1>Contact</h1>
 
-  <div class="link-grid">
-    <Card
-      blank
-      title="Mail"
-      description="Send me an electronic mail!"
-      url="mailto:quinn@emo.gay"
-      icon="fa-solid fa-envelope"
-    />
-
-    <Card
-      blank
-      title="Discord"
-      description="Slip into my DMs."
-      url="https://discord.com/users/265449318780108800"
-      icon="fa-brands fa-discord"
-    />
-  </div>
+  <CardGrid
+    cards={[
+      {
+        blank: true,
+        title: "Mail",
+        description: "Send me an electronic mail!",
+        url: "mailto:quinn@emo.gay",
+        icon: "fa-solid fa-envelope",
+      },
+      {
+        blank: true,
+        title: "Discord",
+        description: "Slip into my DMs.",
+        url: "https://discord.com/users/265449318780108800",
+        icon: "fa-brands fa-discord",
+      },
+    ]}
+  />
 </section>

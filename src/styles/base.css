@@ -1,0 +1,33 @@
+@layer base {
+  p {
+    @apply text-xl/relaxed;
+  }
+
+  main h1 {
+    @apply mb-2 font-bold text-3xl;
+  }
+
+  main p:not(:last-child),
+  main code:not(:last-child) {
+    @apply mb-4;
+  }
+
+  main a {
+    @apply underline decoration-dashed decoration-underline;
+    @apply hover:decoration-highlight hover:text-highlight;
+    @apply transition-colors ease-in-out duration-100;
+
+    &:hover::selection {
+      @apply text-background-lighter decoration-background-lighter;
+    }
+  }
+
+  code {
+    @apply border border-solid border-section-border;
+    @apply p-2 overflow-x-scroll;
+  }
+
+  ::selection {
+    @apply bg-highlight;
+  }
+}
